@@ -16,13 +16,17 @@ class UsuariosC{
 			if (isset($resultado['rut_user']) and $resultado['rut_user'] == $_POST['rut'] && $resultado['pass'] == $_POST['pass']) {
 				
 				$_SESSION['Ingresar'] = true;
+				$_SESSION['rut_user'] = $resultado['rut_user'];
+				$_SESSION['nombre'] = $resultado['nombre'];
+				$_SESSION['apellido'] = $resultado['apellido'];
+				$_SESSION['correo'] = $resultado['correo'];
+				$_SESSION['roles'] = $resultado['rol'];
 
 				echo '<script>window.location = "inicio";</script>';
 
 			}else{
 
-				echo '<br>
-					  <div class="alert alert-danger alert-dismissible text-center">Datos Erroneos</div>';
+				echo '<br> <div class="alert alert-danger text-center">Datos Erroneos</div>';
 	               
 
 			}
@@ -56,6 +60,27 @@ class UsuariosC{
 	} // if isset
 
 	}// fin MatricularALumnosC
+
+
+
+	public function DatosUsuarioAlumnosC($rut){
+
+		$resultado = UsuariosM::DatosUsuarioAlumnosM($rut);
+
+
+			return $resultado;		
+
+	}// fin DatosUsuarioAlumnosC
+
+
+	public function DatosUsuarioDocentesC($rut){
+
+		$resultado = UsuariosM::DatosUsuarioDocentesM($rut);
+
+
+			return $resultado;		
+
+	}// fin DatosUsuarioDocentesC	
 
 
 } // fin clase UsuariosC

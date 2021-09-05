@@ -14,7 +14,14 @@
           <img src="http://localhost/proyecto/vistas/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="http://localhost/proyecto/perfil" class="d-block">Alexander Pierce</a>
+
+          <?php if ($_SESSION['roles'] == "Alumno"): ?>
+            <a href="http://localhost/proyecto/perfil-alumno" class="d-block"><?php echo $_SESSION['nombre'] ?></a>
+          <?php elseif($_SESSION['roles'] == "Docente" || $_SESSION['roles'] == "Admin"): ?>  
+            <a href="http://localhost/proyecto/perfil-docente" class="d-block"><?php echo $_SESSION['nombre'] ?></a>
+          <?php endif ?>
+
+          
         </div>
       </div>
 

@@ -22,7 +22,7 @@
         <div class="icon">
           <i class="ion ion-ios-bookmarks"></i>
         </div>
-        <a href="info-curso/<?php echo $fila['cod_curso'] ?>" class="small-box-footer">ver curso<i class="fas fa-arrow-circle-right"></i></a>
+        <a href="info-curso/<?php echo $fila['cod_curso'] ?>" class="small-box-footer">ver curso <i class="fas fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->

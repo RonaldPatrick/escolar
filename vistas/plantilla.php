@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Starter</title>
+  <title>Sistema | Escolar</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -76,13 +76,13 @@ echo '<div class="content-wrapper pt-5 pb-5">';
 
     $url = explode("/", $_GET["url"]);
 
-    if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "cursos" || $url[0] == "perfil" || $url[0] == "info-curso" || $url[0] == "matriculas" || $url[0] == "materias" ){
+    if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "cursos" || $url[0] == "perfil-alumno" || $url[0] == "perfil-docente"  || $url[0] == "info-curso" || $url[0] == "matriculas" || $url[0] == "materias" ){
 
       include "paginas/".$url[0].".php";
 
 
 
-    }elseif($url[0] != "inicio" || $url[0] != "salir" || $url[0] != "cursos" || $url[0] != "perfil" || $url[0] != "info-curso" || $url[0] != "matriculas" || $url[0] != "materias" ){
+    }elseif($url[0] != "inicio" || $url[0] != "salir" || $url[0] != "cursos" || $url[0] != "perfil-alumno" || $url[0] == "perfil-docente" || $url[0] != "info-curso" || $url[0] != "matriculas" || $url[0] != "materias" ){
 
       include "paginas/error404.php";
 
@@ -107,6 +107,8 @@ echo '</div>';
 
     include "paginas/ingresar.php";
 
+  }else{
+    include "paginas/ingresar.php";
   }
 
 

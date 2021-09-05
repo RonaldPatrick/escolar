@@ -64,4 +64,35 @@ class UsuariosM extends ConexionBD{
 	} // fin matricular alumnos
 
 
+	public function DatosUsuarioAlumnosM($rut){
+
+		$query = ConexionBD::cBD()->query("SELECT * FROM sis_matriculas 
+				INNER JOIN sis_alumnos ON sis_matriculas.rut_alu_mts = sis_alumnos.rut_alu
+				INNER JOIN sis_datos_curso ON sis_matriculas.rut_alu_mts = sis_datos_curso.rut_alu_datos
+				INNER JOIN sis_docentes ON sis_datos_curso.rut_docente_datos = sis_docentes.rut_docente_doc
+				WHERE sis_matriculas.rut_alu_mts = '$rut' ");
+
+		$row = $query->fetch_array();
+
+		return $row;
+
+
+	}// fin DatosUsuarioAlumnosM
+
+
+	public function DatosUsuarioDocentesM($rut){
+
+		$query = ConexionBD::cBD()->query("SELECT * FROM sis_docentes  
+				INNER JOIN sis_datos_curso ON sis_docentes.rut_docente_doc = sis_datos_curso.rut_docente_datos
+				INNER JOIN sis_cursos ON sis_docentes.rut_docente_doc = sis_cursos.profesor_jefe_curso
+				WHERE sis_docentes.rut_docente_doc = '$rut' ");
+
+		$row = $query->fetch_array();
+
+		return $row;
+
+
+	}// FIN DatosUsuarioDocentesM	
+
+
 } // fin clase
