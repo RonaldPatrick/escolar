@@ -1,3 +1,5 @@
+<h1>hola mundo</h1>
+
 <?php if ($_SESSION['roles'] != "Docente") {
  echo '<script>window.location = "inicio";</script>';
 } ?> 
