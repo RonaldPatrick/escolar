@@ -11,6 +11,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sistema | Escolar</title>
 
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -40,6 +41,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- CSS PERSONALIZADO -->
   <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/csspersonalizado/miscsspersonalizados.css">
+
+  <!-- jquey -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
 </head>
 
 <script type="text/javascript">
@@ -76,13 +81,13 @@ echo '<div class="content-wrapper pt-5 pb-5">';
 
     $url = explode("/", $_GET["url"]);
 
-    if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "cursos" || $url[0] == "perfil-alumno" || $url[0] == "perfil-docente"  || $url[0] == "info-curso" || $url[0] == "matriculas" || $url[0] == "materias" ){
+    if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "cursos" || $url[0] == "perfil-alumno" || $url[0] == "perfil-docente"  || $url[0] == "info-curso" || $url[0] == "matriculas" || $url[0] == "materias" || $url[0] == "registro-docente" ){    
 
       include "paginas/".$url[0].".php";
 
 
 
-    }elseif($url[0] != "inicio" || $url[0] != "salir" || $url[0] != "cursos" || $url[0] != "perfil-alumno" || $url[0] == "perfil-docente" || $url[0] != "info-curso" || $url[0] != "matriculas" || $url[0] != "materias" ){
+    }elseif($url[0] != "inicio" || $url[0] != "salir" || $url[0] != "cursos" || $url[0] != "perfil-alumno" || $url[0] == "perfil-docente" || $url[0] != "info-curso" || $url[0] != "matriculas" || $url[0] != "materias" || $url[0] != "registro-docente" ){
 
       include "paginas/error404.php";
 

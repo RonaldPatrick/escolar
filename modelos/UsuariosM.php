@@ -95,4 +95,18 @@ class UsuariosM extends ConexionBD{
 	}// FIN DatosUsuarioDocentesM	
 
 
+	public function datosdosM($array){
+
+		$ape = $array['apellido'];
+		$nombre = $array['nombre'];
+
+		$query = ConexionBD::cBD()->query("INSERT INTO datos values('', '$ape', '$nombre' ) ");
+
+
+		return $query;
+
+
+	}// FIN DatosUsuarioDocentesM		
+
+
 } // fin clase

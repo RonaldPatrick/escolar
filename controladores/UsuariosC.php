@@ -82,5 +82,23 @@ class UsuariosC{
 
 	}// fin DatosUsuarioDocentesC	
 
+	public function datosdosC($array){
+
+		$resultado = UsuariosM::datosdosM($array);
+
+
+			if ($resultado == true) {
+				$ok = "ok";
+				return $ok;
+			}else{
+
+				$ok = "no";
+				return $ok;
+			}
+
+			
+
+	}// fin DatosUsuarioDocentesC		
+
 
 } // fin clase UsuariosC
