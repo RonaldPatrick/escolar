@@ -40,7 +40,11 @@
 <script src="http://localhost/proyecto/vistas/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="http://localhost/proyecto/vistas/dist/js/demo.js"></script>
-<!-- Page specific script -->
+<!-- Toastr -->
+<script src="http://localhost/proyecto/vistas/plugins/toastr/toastr.min.js"></script>
+
+
+<script src="http://localhost/proyecto/vistas/plugins/myjs/myjs.js"></script>
 <script>
   $(function () {
     //Initialize Select2 Elements
@@ -116,8 +120,17 @@
       $(this).bootstrapSwitch('state', $(this).prop('checked'));
     })
 
+
+
+    // $('.toastrDefaultSuccess').click(function() {
+    // toastr.success('bien')
+    // });
+
+
   })
   // DropzoneJS Demo Code End
+</script>
+<script>if ( window.history.replaceState ) { window.history.replaceState( null, null, window.location.href ); } 
 </script>
 </body>
 </html>

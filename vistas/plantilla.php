@@ -37,7 +37,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/dropzone/min/dropzone.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="http://localhost/proyecto/vistas/dist/css/adminlte.min.css">
-
+  <!-- Toastr -->
+  <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/toastr/toastr.min.css">
 
   <!-- CSS PERSONALIZADO -->
   <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/csspersonalizado/miscsspersonalizados.css">

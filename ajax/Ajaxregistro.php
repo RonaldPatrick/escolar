@@ -16,9 +16,9 @@ if (isset($_POST['enviar'])) {
 		$respuesta = UsuariosC::datosdosC($array);
 
 		if ($respuesta == "ok") {
-			echo '<br> <div class="alert alert-danger text-center">Bien</div>';
+			echo 'ok';
 		}else{
-			echo '<br> <div class="alert alert-danger text-center">Mal</div>';
+			echo 'no';
 		}
 
 

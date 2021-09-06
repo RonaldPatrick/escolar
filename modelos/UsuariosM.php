@@ -100,10 +100,15 @@ class UsuariosM extends ConexionBD{
 		$ape = $array['apellido'];
 		$nombre = $array['nombre'];
 
-		$query = ConexionBD::cBD()->query("INSERT INTO datos values('', '$ape', '$nombre' ) ");
+		$query = ConexionBD::cBD()->query("INSERT INTO datoss values('', '$ape', '$nombre' ) ");
 
 
-		return $query;
+			if ($query == true) {
+				return "ok";
+			}else{
+
+				return "no";
+			}
 
 
 	}// FIN DatosUsuarioDocentesM		

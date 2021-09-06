@@ -87,13 +87,11 @@ class UsuariosC{
 		$resultado = UsuariosM::datosdosM($array);
 
 
-			if ($resultado == true) {
-				$ok = "ok";
-				return $ok;
+			if ($resultado == "ok") {
+				return "ok";
 			}else{
 
-				$ok = "no";
-				return $ok;
+				return "no";
 			}
 
 			
