@@ -47,12 +47,21 @@ function enviar(){
           toastr.warning('el usuario ya se encuentra registrado')
             });
 
+      }else if(res == "datos-requeridos"){ 
+
+
+            $('.toastrDefaultInfo').ready(function() {
+              toastr.info('Todos los datos son nesesarios')
+            });
+
       }else{
 
-    $('.toastrDefaultError').ready(function() {
-      toastr.error('Error al registrar')
-    });
+        $('.toastrDefaultError').ready(function() {
+          toastr.error('Error al registrar')
+        });
+
       }
+
 
   	}
 

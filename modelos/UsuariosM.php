@@ -95,6 +95,9 @@ class UsuariosM extends ConexionBD{
 	}// FIN DatosUsuarioDocentesM	
 
 
+
+
+
 	public function datosdosM($array){
 
 		$ape = $array['apellido'];

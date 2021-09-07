@@ -82,6 +82,8 @@ class UsuariosC{
 
 	}// fin DatosUsuarioDocentesC	
 
+
+
 	public function datosdosC($array){
 
 		$resultado = UsuariosM::datosdosM($array);
