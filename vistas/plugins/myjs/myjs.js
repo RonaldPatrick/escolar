@@ -5,9 +5,9 @@ $(document).ready(function(){
 
 $('#enviar').click(function(e){
 
-
 enviar();
 e.preventDefault();
+
 });
 
 
@@ -18,10 +18,11 @@ function enviar(){
 
   datos.append('nombre', $('#nombre').val());
   datos.append('apellido', $('#apellido').val());
+  datos.append('correo', $('#correoD').val());
   datos.append('enviar', $('#enviar').val());
 
 
-  console.log(datos.get('nombre'));
+  console.log(datos.get('correo'));
 
   $.ajax({
 
@@ -40,6 +41,12 @@ function enviar(){
         $('.toastrDefaultSuccess').ready(function() {
         toastr.success('Registro exitoso')
         });
+      }else if(res == "existe"){ 
+
+            $('.toastrDefaultWarning').ready(function() {
+          toastr.warning('el usuario ya se encuentra registrado')
+            });
+
       }else{
 
     $('.toastrDefaultError').ready(function() {

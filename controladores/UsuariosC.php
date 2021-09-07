@@ -88,10 +88,17 @@ class UsuariosC{
 
 
 			if ($resultado == "ok") {
+
 				return "ok";
+
+			}elseif($resultado == "existe"){
+
+				return "existe";
+
 			}else{
 
 				return "no";
+
 			}
 
 			

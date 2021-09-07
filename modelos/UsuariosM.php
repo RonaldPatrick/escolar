@@ -99,16 +99,29 @@ class UsuariosM extends ConexionBD{
 
 		$ape = $array['apellido'];
 		$nombre = $array['nombre'];
+		$correo = $array['correo'];
 
-		$query = ConexionBD::cBD()->query("INSERT INTO datoss values('', '$ape', '$nombre' ) ");
+
+		$query1 = ConexionBD::cBD()->query("SELECT * FROM datos where correo = '$correo' ");
+
+		$row = $query1->num_rows;
+
+		if ($row > 0) {
+			
+			return "existe";
+		}else{
+
+			$query2 = ConexionBD::cBD()->query("INSERT INTO datos values('', '$ape', '$nombre', '$correo' )");
 
 
-			if ($query == true) {
-				return "ok";
-			}else{
+				if ($query2 == true) {
+					return "ok";
+				}else{
 
-				return "no";
-			}
+					return "no";
+				}
+
+		}
 
 
 	}// FIN DatosUsuarioDocentesM		

@@ -25,8 +25,9 @@
 	
 	<input type="text" name="nombre" id="nombre"><br>
 
-	
-	<input type="text" name="apellido" id="apellido"><br><br>
+	<input type="text" name="apellido" id="apellido"><br>
+
+  <input type="text" name="correo" id="correoD"><br>
 
 	<button class="" id="enviar">Enviar</button><br>
 
