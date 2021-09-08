@@ -35,7 +35,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">R.U.N</label>
-                    <input type="text" class="form-control" name="rut" id="rut_doc" placeholder="Enter email" required="" onkeyup="formatCliente1(this)" minlength="8" maxlength="11">
+                    <input type="text" class="form-control" name="rut" id="rut_doc" placeholder="12345678-9" required="" onkeyup="formatCliente1(this)" minlength="8" maxlength="11">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -43,7 +43,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Nombres</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre-doc" placeholder="Enter email" required="">
+                    <input type="text" class="form-control" name="nombre" id="nombre-doc" placeholder="Juan Daniel" required="">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -56,7 +56,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Apellido Paterno</label>
-                    <input type="text" class="form-control" name="apellido_p" id="apellido_p_doc" placeholder="Enter email" required="">
+                    <input type="text" class="form-control" name="apellido_p" id="apellido_p_doc" placeholder="Perez" required="">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -64,7 +64,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Apellido Materno</label>
-                    <input type="text" class="form-control" name="apellido_m" id="apellido_m_doc" placeholder="Enter email" required="">
+                    <input type="text" class="form-control" name="apellido_m" id="apellido_m_doc" placeholder="Correa" required="">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -75,7 +75,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Fecha Nacimiento</label>
-                    <input type="text" class="form-control" name="fecha_n" id="fecha_n_doc" placeholder="Enter email" required="">
+                    <input type="text" class="form-control" name="fecha_n" id="fecha_n_doc" placeholder="01/01/1975" required="">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -83,7 +83,11 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Sexo</label>
-                    <input type="text" class="form-control" name="sexo" id="sexo_doc" placeholder="Enter email" required="">
+                    <select class="form-control" name="sexo" id="sexo_doc" name="" id="Seleccione" required="">
+                      <option value="" disabled="" selected="">Seleccione</option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Femenino">Femenino</option>
+                    </select>
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -131,7 +135,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Direccion</label>
-                    <input type="text" class="form-control" name="direccion" id="direccion_doc" placeholder="Enter email" required="">
+                    <input type="text" class="form-control" name="direccion" id="direccion_doc" placeholder="Calle #123" required="">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -139,7 +143,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Correo</label>
-                    <input type="text" class="form-control" name="correo" id="correo_doc" placeholder="Enter email" required="">
+                    <input type="text" class="form-control" name="correo" id="correo_doc" placeholder="micorreo@gmail.com" required="">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -151,7 +155,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Titulo Profesional</label>
-                    <input type="text" class="form-control" name="titulo" id="titulo_doc" placeholder="Enter email">
+                    <input type="text" class="form-control" name="titulo" id="titulo_doc" placeholder="ingenieria en...">
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -159,7 +163,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Asignatura</label>
-                    <input type="text" class="form-control" name="asignatura" id="asignatura_doc" placeholder="Enter email">
+                    <input type="text" class="form-control" name="asignatura" id="asignatura_doc" placeholder="Historia">
                   </div>
                 <!-- /.form-group -->
               </div>
