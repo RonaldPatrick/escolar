@@ -84,9 +84,9 @@ class UsuariosC{
 
 
 
-	public function datosdosC($array){
+	public function RegistrarDocenteC($array){
 
-		$resultado = UsuariosM::datosdosM($array);
+		$resultado = UsuariosM::RegistrarDocenteM($array);
 
 
 			if ($resultado == "ok") {

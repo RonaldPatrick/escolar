@@ -12,15 +12,16 @@ if (isset($_POST['enviar'])) {
 	
 
 
-	if ($_POST['nombre'] == "" || $_POST['apellido'] == "" || $_POST['correo'] == "") {
-		
+	if ($_POST['rut'] == "" || $_POST['nombre'] == "" || $_POST['apellido_p'] == "" || $_POST['apellido_m'] == "" || $_POST['fecha_n'] == "" || $_POST['sexo'] == "" || $_POST['comuna'] == "" || $_POST['region'] == "" || $_POST['direccion'] == "" || $_POST['correo'] == "" || $_POST['titulo'] == "" || $_POST['asignatura'] == "") {
+
+
 		echo "datos-requeridos";
 
 	}else{
 
-			$array = array('nombre' => $_POST['nombre'], 'apellido' => $_POST['apellido'], 'correo' => $_POST['correo']);
+			$array = array('rut' => $_POST['rut'], 'nombre' => $_POST['nombre'], 'apellido_p' => $_POST['apellido_p'], 'apellido_m' => $_POST['apellido_m'], 'fecha_n' => $_POST['fecha_n'], 'sexo' => $_POST['sexo'], 'comuna' => $_POST['comuna'], 'region' => $_POST['region'], 'direccion' => $_POST['direccion'], 'correo' => $_POST['correo'], 'titulo' => $_POST['titulo'], 'asignatura' => $_POST['asignatura']);
 
-				$respuesta = UsuariosC::datosdosC($array);
+				$respuesta = UsuariosC::RegistrarDocenteC($array);
 
 				if ($respuesta == "ok") {
 					echo 'ok';

@@ -98,14 +98,24 @@ class UsuariosM extends ConexionBD{
 
 
 
-	public function datosdosM($array){
+	public function RegistrarDocenteM($array){
 
-		$ape = $array['apellido'];
+		$rut = $array['rut'];
 		$nombre = $array['nombre'];
+		$apellido_p = $array['apellido_p'];
+		$apellido_m = $array['apellido_m'];
+		$fecha_n = $array['fecha_n'];
+		$sexo = $array['sexo'];
+		$comuna = $array['comuna'];
+		$region = $array['region'];
+		$direccion = $array['direccion'];
 		$correo = $array['correo'];
+		$titulo = $array['titulo'];
+		$asignatura = $array['asignatura'];
 
 
-		$query1 = ConexionBD::cBD()->query("SELECT * FROM datos where correo = '$correo' ");
+
+		$query1 = ConexionBD::cBD()->query("SELECT * FROM sis_docentes where rut_docente_doc = '$rut' ");
 
 		$row = $query1->num_rows;
 
@@ -114,7 +124,7 @@ class UsuariosM extends ConexionBD{
 			return "existe";
 		}else{
 
-			$query2 = ConexionBD::cBD()->query("INSERT INTO datos values('', '$ape', '$nombre', '$correo' )");
+			$query2 = ConexionBD::cBD()->query("INSERT INTO sis_docentes values('$rut', '$nombre', '$apellido_p', '$apellido_m', '$fecha_n', '$sexo', '$comuna', '$region', '$direccion', '$correo', '$titulo', '$asignatura' )");
 
 
 				if ($query2 == true) {
