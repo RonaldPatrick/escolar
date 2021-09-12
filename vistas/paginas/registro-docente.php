@@ -75,7 +75,7 @@
               <div class="col-12 col-sm-6">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Fecha Nacimiento</label>
-                    <input type="text" class="form-control" name="fecha_n" id="fecha_n_doc" placeholder="01/01/1975" required="">
+                    <input type="text" class="form-control" name="fecha_n" id="fecha_n_doc" placeholder="01/01/1975" required="" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -195,13 +195,6 @@
           </div>
         </div>
   </form>
-
-
-
-
-
-
-
 
 
 

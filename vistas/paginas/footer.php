@@ -43,6 +43,9 @@
 <!-- Toastr -->
 <script src="http://localhost/proyecto/vistas/plugins/toastr/toastr.min.js"></script>
 
+<script src="http://localhost/proyecto/vistas/plugins/moment/moment.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/inputmask/jquery.inputmask.min.js"></script>
+
 
 <script src="http://localhost/proyecto/vistas/plugins/myjs/myjs.js"></script>
 <script>
