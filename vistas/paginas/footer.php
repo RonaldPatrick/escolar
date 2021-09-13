@@ -46,6 +46,20 @@
 <script src="http://localhost/proyecto/vistas/plugins/moment/moment.min.js"></script>
 <script src="http://localhost/proyecto/vistas/plugins/inputmask/jquery.inputmask.min.js"></script>
 
+<!-- DATA TABLES -->
+<script src="http://localhost/proyecto/vistas/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/jszip/jszip.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="http://localhost/proyecto/vistas/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
 
 <script src="http://localhost/proyecto/vistas/plugins/myjs/myjs.js"></script>
 <script>
@@ -132,6 +146,23 @@
 
   })
   // DropzoneJS Demo Code End
+</script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
 </script>
 <script>if ( window.history.replaceState ) { window.history.replaceState( null, null, window.location.href ); } 
 </script>

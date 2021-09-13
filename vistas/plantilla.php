@@ -43,6 +43,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- CSS PERSONALIZADO -->
   <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/csspersonalizado/miscsspersonalizados.css">
 
+  <!-- DATA TABLE -->
+  <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="http://localhost/proyecto/vistas/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
   <!-- jquey -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   
@@ -82,13 +87,13 @@ echo '<div class="content-wrapper pt-5 pb-5">';
 
     $url = explode("/", $_GET["url"]);
 
-    if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "cursos" || $url[0] == "perfil-alumno" || $url[0] == "perfil-docente"  || $url[0] == "info-curso" || $url[0] == "matriculas" || $url[0] == "materias" || $url[0] == "registro-docente" ){    
+    if($url[0] == "inicio" || $url[0] == "salir" || $url[0] == "cursos" || $url[0] == "perfil-alumno" || $url[0] == "perfil-docente"  || $url[0] == "info-curso" || $url[0] == "matriculas" || $url[0] == "materias" || $url[0] == "registro-docente" || $url[0] == "lista-docentes" ){    
 
-      include "paginas/".$url[0].".php";
+      include "paginas/".$url[0].".php";  
 
 
 
-    }elseif($url[0] != "inicio" || $url[0] != "salir" || $url[0] != "cursos" || $url[0] != "perfil-alumno" || $url[0] == "perfil-docente" || $url[0] != "info-curso" || $url[0] != "matriculas" || $url[0] != "materias" || $url[0] != "registro-docente" ){
+    }elseif($url[0] != "inicio" || $url[0] != "salir" || $url[0] != "cursos" || $url[0] != "perfil-alumno" || $url[0] == "perfil-docente" || $url[0] != "info-curso" || $url[0] != "matriculas" || $url[0] != "materias" || $url[0] != "registro-docente" || $url[0] != "lista-docentes" ){
 
       include "paginas/error404.php";
 

@@ -51,6 +51,13 @@
           </li>
 
           <li class="nav-item">
+            <a href="http://localhost/proyecto/registro-docente" class="nav-link">
+              <i class="nav-icon fas fa-address-book"></i>
+              <p>Docentes</p>
+            </a>
+          </li>          
+
+          <li class="nav-item">
             <a href="http://localhost/proyecto/cursos" class="nav-link">
               <i class="nav-icon fas fa-chalkboard-teacher"></i>
               <p>Cursos</p>
@@ -64,12 +71,40 @@
             </a>
           </li>
 
+
+                    <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Administracion
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">6</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="http://localhost/proyecto/lista-docentes" class="nav-link"> 
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lista Docentes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <br>
+          <br>
+
           <li class="nav-item">
             <a href="http://localhost/proyecto/salir" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt" style="color: #e30909"></i>
               <p>Salir</p>
             </a>
           </li>
+
+
+
+
+
 
 
         </ul>
