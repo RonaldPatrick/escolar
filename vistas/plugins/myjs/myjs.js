@@ -78,3 +78,44 @@ function enviar(){
   });
   
 }
+
+
+function obtenercodigo(rutdc){
+
+
+
+
+var datos = new FormData();
+
+datos.append('rutt', rutdc);
+//datos.append('rut', $('#rut_doc').val());
+
+
+  $.ajax({
+
+    type: "post",
+    url: "http://localhost/proyecto/ajax/Ajaxregistro.php?op=obtenercodigo",
+    data: datos,
+    processData: false,
+    contentType:false,
+    success: function (res){
+
+      data = $.parseJSON(res);
+
+
+        $("#nombredocecnte").val(data.nombre_doc);
+
+
+
+
+      //$('#resp').html(respuesta);
+      console.log(data.nombre_doc);
+
+
+    } 
+
+
+  });
+
+
+ }

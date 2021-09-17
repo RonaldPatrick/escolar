@@ -41,4 +41,19 @@ if (isset($_POST['enviar'])) {
 
 
 
+
+if ($_REQUEST['op'] == 'obtenercodigo') {
+
+	$rutdc = base64_decode($_POST['rutt']);
+
+	$respuesta = UsuariosC::GetrutDocenteC($rutdc);
+
+	echo $respuesta;
+
+	//echo base64_decode($_POST['rutt']);	
+	//UsuariosC::GetrutDocenteC();
+
+}
+
+
 ?>

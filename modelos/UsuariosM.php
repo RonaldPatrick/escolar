@@ -137,7 +137,19 @@ class UsuariosM extends ConexionBD{
 		}
 
 
-	}// FIN DatosUsuarioDocentesM		
+	}// FIN DatosUsuarioDocentesM	
+
+
+
+	public function GetrutDocenteM($rutdc){
+
+		$query = ConexionBD::cBD()->query("SELECT * FROM sis_docentes where rut_docente_doc = '$rutdc' ");
+
+		$row = $query->fetch_array();
+
+		return $row;
+
+	}	
 
 
 } // fin clase

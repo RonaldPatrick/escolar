@@ -105,7 +105,22 @@ class UsuariosC{
 
 			
 
-	}// fin DatosUsuarioDocentesC		
+	}// fin DatosUsuarioDocentesC	
+
+
+	public function GetrutDocenteC($rutdc){
+
+		$resultado = UsuariosM::GetrutDocenteM($rutdc);
+
+		$array = array("nombre_doc" => $resultado['rut_docente_doc'],
+				  "apellido_doc" => $resultado['nombre_docente_doc']);	
+
+
+		echo json_encode($array);
+
+
+
+	}	
 
 
 } // fin clase UsuariosC
